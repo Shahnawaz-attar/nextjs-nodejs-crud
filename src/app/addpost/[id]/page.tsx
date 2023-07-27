@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import toast, { Toaster } from 'react-hot-toast';
-import { delay } from '@/helpers/helpers';
 import { useRouter, useParams } from 'next/navigation';
 
 interface Post {

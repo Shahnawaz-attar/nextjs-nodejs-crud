@@ -20,7 +20,7 @@ const userInitialValue: User = {
   username: '',
 };
 
-const signUpPage = () => {
+const SignUpPage = () => {
   const router = useRouter();
   const [user, setUser] = useState<User>(userInitialValue);
   const [message, setMessage] = useState<string>('');
@@ -140,4 +140,4 @@ const signUpPage = () => {
   );
 };
 
-export default signUpPage;
+export default SignUpPage;
