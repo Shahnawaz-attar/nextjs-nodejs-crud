@@ -19,13 +19,6 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
       });
     }
 
-    if (userExist) {
-      return NextResponse.json(
-        { message: 'Sorry User already exist', status: false },
-        { status: 401 }
-      );
-    }
-
     //hashPassword
     const salt = await bcryptjs.genSalt(10);
     const hashedPass = await bcryptjs.hash(password, salt);
