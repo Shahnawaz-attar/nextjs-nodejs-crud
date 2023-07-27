@@ -1,21 +1,21 @@
 import mongoose from 'mongoose';
 
-const postModel = new mongoose.Schema({
+const postSchema = new mongoose.Schema({
   productName: {
     type: String,
-    required: [true, 'Product name is require'],
+    required: [true, 'Product name is required'],
   },
   color: {
     type: String,
-    required: [true, 'price is require'],
+    required: [true, 'Color is required'],
   },
   price: {
-    type: String,
-    required: [true, 'Price is require'],
+    type: Number,
+    required: [true, 'Price is required'],
   },
 });
 
-const modelPost =
-  mongoose.models.postModel || mongoose.model('postModel', postModel);
+const PostModel =
+  mongoose.models.postModel || mongoose.model('postModel', postSchema);
 
-export default modelPost;
+export default PostModel;
